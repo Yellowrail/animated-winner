@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "AI Text Detector",
+    "version": "1.0",
+    "description": "Detects if highlighted text is AI-generated.",
+    "permissions": ["contextMenus", "scripting", "activeTab"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_title": "AI Text Detector"
+    },
+    "icons": {
+      "128": "icons/icon128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
