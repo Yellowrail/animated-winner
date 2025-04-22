@@ -32,7 +32,7 @@ window.addEventListener("message", async (event) => {
   
   async function detectAI(text) {
     try {
-      const response = await fetch("http://localhost:5000/detect", {
+      const response = await fetch("https://animated-winner-2.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
