@@ -11,7 +11,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     const selectedText = info.selectionText;
 
     // Send text to Flask backend
-    const response = await fetch("http://localhost:5000/detect", {
+    const response = await fetch("https://animated-winner-2.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: selectedText })
